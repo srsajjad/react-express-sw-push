@@ -1,0 +1,21 @@
+{
+  "name": "push",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "sw-precache": "^5.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && sw-precache --config=sw-precache-config.js && node push.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "serve": "node server.js",
+    "sw": "node build-sw.js",
+    "start:prod": "yarn build  && serve -s build -p 3000"
+  }
+}
